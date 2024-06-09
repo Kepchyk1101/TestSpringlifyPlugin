@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'io.freefair.lombok' version '8.4'
+}
+
+group = 'me.kepchyk1101'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name = "starmcRepoPublic"
+        url = uri("https://repo.star-mc.ru/public")
+    }
+    maven {
+        name = 'CodeMC'
+        url = 'https://repo.codemc.io/repository/maven-public/'
+    }
+    maven {
+        name = 'Paper'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+}
+
+dependencies {
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
+    implementation 'dev.temez.springlify:springlify-platform-bukkit:0.7.0.0.1-RC1'
+    implementation 'dev.temez.springlify:springlify-commander-bukkit:0.7.0.0.1-RC1'
+    implementation 'dev.temez.springlify:springlify-starter-bukkit:0.7.0.0.1-RC1'
+}

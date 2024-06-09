@@ -1,0 +1,5 @@
+name: TestSpringlifyPlugin
+version: '1.0'
+main: me.kepchyk1101.testspringlifyplugin.application.TestSpringlifyPlugin
+api-version: '1.16'
+author: Kepchyk1101
